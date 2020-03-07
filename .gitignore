@@ -1,0 +1,12 @@
+### OS Specific ###
+.DS_Store
+
+### IntelliJ IDEA ###
+/.idea/
+*.iws
+*.iml
+*.ipr
+
+### Maven ###
+!.mvn/wrapper/maven-wrapper.jar
+/target/
