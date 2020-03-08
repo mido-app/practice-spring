@@ -1,3 +1,5 @@
+package example;
+
 import org.springframework.boot.*;
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.web.bind.annotation.*;
@@ -6,9 +8,9 @@ import org.springframework.web.bind.annotation.*;
 @EnableAutoConfiguration
 public class ExampleController {
 
-    @RequestMapping("/")
-    String home() {
-        return "Hello Spring Boot!";
+    @GetMapping("/example")
+    public ExampleResponse home(@RequestParam(defaultValue = "World") String name) {
+        return new ExampleResponse(String.format("Hello, %s!", name));
     }
 
     public static void main(String[] args) {
