@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST}/${MYSQL_DATABASE}?useSSL=false
+    username: ${MYSQL_USER}
+    password: ${MYSQL_PASSWORD}

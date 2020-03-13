@@ -1,7 +1,7 @@
 version: '3'
 services:
-  api-server:
-    container_name: api-server
+  api:
+    container_name: example-api-server
     image: amazoncorretto:8u202
     volumes:
       - ${PWD}:/api-server
@@ -10,5 +10,25 @@ services:
       - 8080:8080
     environment:
       JAVA_HOME: /usr/lib/jvm/java
+      MYSQL_HOST: db
+      MYSQL_USER: example
+      MYSQL_PASSWORD: password
+      MYSQL_DATABASE: example
     working_dir: /api-server
     command: ./mvnw spring-boot:run
+    depends_on:
+      - db
+  db:
+      container_name: example-db-server
+      image: mysql:5.7.29
+      ports:
+        - 3306:3306
+      volumes:
+        - ${PWD}/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      environment:
+        MYSQL_ROOT_PASSWORD: password
+        MYSQL_USER: example
+        MYSQL_PASSWORD: password
+        MYSQL_DATABASE: example
+
+

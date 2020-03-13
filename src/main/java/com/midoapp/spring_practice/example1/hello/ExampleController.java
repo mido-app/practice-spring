@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @EnableAutoConfiguration
 public class ExampleController {
 
-    @GetMapping("/example")
+    @GetMapping("/example1/hello")
     public ExampleResponse home(@RequestParam(defaultValue = "World") String name) {
         return new ExampleResponse(String.format("Hello, %s!", name));
     }

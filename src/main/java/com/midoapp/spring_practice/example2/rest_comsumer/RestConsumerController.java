@@ -20,7 +20,7 @@ public class RestConsumerController {
         this.restTemplate = builder.build();
     }
 
-    @GetMapping("/rest-consumer")
+    @GetMapping("/example2/rest-consumer")
     public Quote get() {
         Quote quote = this.restTemplate.getForObject(
             "https://gturnquist-quoters.cfapps.io/api/random",
