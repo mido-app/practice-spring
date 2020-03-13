@@ -1,4 +1,4 @@
-package com.midoapp.spring_practice.rest_comsumer;
+package com.midoapp.spring_practice.example2.rest_comsumer;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 

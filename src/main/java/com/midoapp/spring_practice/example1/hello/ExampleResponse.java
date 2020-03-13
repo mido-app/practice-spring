@@ -1,4 +1,4 @@
-package com.midoapp.spring_practice.example;
+package com.midoapp.spring_practice.example1.hello;
 
 public class ExampleResponse {
     private final String message;

@@ -1,8 +1,11 @@
-package com.midoapp.spring_practice.example;
+package com.midoapp.spring_practice.example1.hello;
 
 import org.springframework.boot.autoconfigure.*;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * Hello, World!
+ */
 @RestController
 @EnableAutoConfiguration
 public class ExampleController {

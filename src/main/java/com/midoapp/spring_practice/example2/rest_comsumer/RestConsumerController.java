@@ -1,4 +1,4 @@
-package com.midoapp.spring_practice.rest_comsumer;
+package com.midoapp.spring_practice.example2.rest_comsumer;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * 外部APIを呼び出すサンプル
+ */
 @RestController
 public class RestConsumerController {
     private static final Logger logger = LoggerFactory.getLogger(RestConsumerController.class);
